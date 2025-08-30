@@ -1,0 +1,24 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  opacity: 0.6;
+  animation: twinkle 8s linear infinite;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.4; }
+  50%  { opacity: 0.8; }
+  to   { opacity: 0.4; }
+}
